@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>机换社 - 首页</title>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .home-banner {
+            width: 100%;
+            height: 320px;
+            border-radius: 12px;
+            overflow: hidden;
+            background: linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+            display: flex;
+            align-items: center;
+            padding: 0 50px;
+            color: #fff;
+            margin-bottom: 25px;
+        }
+        .banner-text h2 {
+            font-size: 36px;
+            margin-bottom: 12px;
+        }
+        .banner-text p {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        .banner-btn {
+            padding: 10px 28px;
+            background: #fff;
+            color: #667eea;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .quick-entry {
+            background: #fff;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .entry-list {
+            display: grid;
+            grid-template-columns: repeat(8,1fr);
+            gap: 15px;
+            text-align: center;
+        }
+        .entry-item {
+            padding: 15px 0;
+            border-radius: 10px;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+        .entry-item:hover {
+            background: #f5f7fa;
+        }
+        .entry-item i {
+            font-size: 28px;
+            color: #667eea;
+            margin-bottom: 8px;
+        }
+        .entry-item span {
+            display: block;
+            font-size: 14px;
+            color: #333;
+        }
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-title i {
+            color: #667eea;
+        }
+        .cate-wrap {
+            background: #fff;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .cate-list {
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            gap: 20px;
+        }
+        .cate-item {
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            background: #f9fafc;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .cate-item:hover {
+            background: #667eea;
+            color: #fff;
+        }
+        .cate-item img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            object-fit: cover;
+        }
+        .cate-item .num {
+            font-size: 12px;
+            color: #999;
+        }
+        .cate-item:hover .num {
+            color: #fff;
+            opacity: 0.8;
+        }
+        .home-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .more-link {
+            margin-left: auto;
+            font-size: 14px;
+            color: #667eea;
+            text-decoration: none;
+        }
+        .home-post-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        .home-post-item:last-child {
+            border-bottom: none;
+        }
+        .post-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .post-left img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        .post-tag-small {
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 12px;
+            background: #f0f4ff;
+            color: #667eea;
+        }
+        .data-wrap {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+        }
+        .data-item {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg,#667eea,#764ba2);
+            border-radius: 12px;
+            color: #fff;
+        }
+        .data-item .num {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="side-nav">
+            <div class="side-logo">
+                <i class="fas fa-mobile-alt"></i>
+                <span>机换社</span>
+            </div>
+            <ul class="nav-list">
+                <li class="nav-item active">
+                    <a href="#"><i class="fas fa-home"></i><span>首页</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-search"></i><span>发现</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-exchange-alt"></i><span>买卖市场</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html"><i class="fas fa-comments"></i><span>讨论区</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-shield-alt"></i><span>避坑指南</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-cog"></i><span>设置</span></a>
+                </li>
+            </ul>
+            <div class="nav-divider"></div>
+            <div class="nav-footer">
+                <a href="#" class="nav-footer-link"><i class="fas fa-question-circle"></i><span>帮助中心</span></a>
+                <a href="#" class="nav-footer-link"><i class="fas fa-user-circle"></i><span>关于我们</span></a>
+            </div>
+        </nav>
+
+        <div class="top-bar">
+            <div class="top-bar-logo">
+                <i class="fas fa-mobile-alt"></i>
+                <span>机换社 - 二手数码3C买卖讨论社区</span>
+            </div>
+            <div class="top-search-box">
+                <i class="fas fa-search top-search-icon"></i>
+                <input type="text" class="top-search-input" placeholder="搜索机型、讨论、买卖信息...">
+            </div>
+            <div class="top-user-area">
+                <button class="publish-btn" id="publishBtn">
+                    <i class="fas fa-pen"></i>
+                    发布帖子
+                </button>
+                <div class="dark-mode-btn" id="darkModeBtn"></div>
+                <div class="top-notice">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge">3</span>
+                </div>
+                <div class="user-dropdown">
+                    <img src="https://picsum.photos/id/1005/100/100" alt="用户头像" class="user-avatar-top">
+                    <span class="user-name">数码爱好者</span>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-item"><i class="fas fa-user"></i>个人中心</div>
+                        <div class="dropdown-item"><i class="fas fa-bookmark"></i>我的收藏</div>
+                        <div class="dropdown-item"><i class="fas fa-history"></i>浏览记录</div>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-item"><i class="fas fa-sign-out-alt"></i>退出登录</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content-wrap">
+            <!-- 轮播图 -->
+            <div class="carousel" id="carousel">
+                <div class="carousel-item active">
+                    <div class="carousel-text">
+                        <h2 class="carousel-title">专业二手数码交易社区</h2>
+                        <p class="carousel-desc">验机指南、价格参考、安全交易，一站式解决二手数码买卖难题</p>
+                        <button class="carousel-btn">立即加入</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-text">
+                        <h2 class="carousel-title">闲置数码变废为宝</h2>
+                        <p class="carousel-desc">个人闲置、专业回收，让你的旧设备发挥最大价值</p>
+                        <button class="carousel-btn">发布闲置</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-text">
+                        <h2 class="carousel-title">避坑指南实时更新</h2>
+                        <p class="carousel-desc">汇总各类诈骗套路，新手也能安心买卖二手数码</p>
+                        <button class="carousel-btn">查看指南</button>
+                    </div>
+                </div>
+                <div class="carousel-indicators">
+                    <div class="indicator active" data-index="0"></div>
+                    <div class="indicator" data-index="1"></div>
+                    <div class="indicator" data-index="2"></div>
+                </div>
+            </div>
+
+            <div class="notice">
+                <i class="fas fa-bullhorn notice-icon"></i>
+                <div class="notice-content">
+                    【重要通知】平台已上线验机担保服务，交易更安全！<a href="#" class="notice-link">立即了解</a>
+                </div>
+            </div>
+
+            <div class="quick-entry">
+                <div class="section-title">
+                    <i class="fas fa-th-large"></i>快捷功能入口
+                </div>
+                <div class="entry-list">
+                    <div class="entry-item">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>我要出售</span>
+                    </div>
+                    <div class="entry-item">
+                        <i class="fas fa-search-dollar"></i>
+                        <span>我要求购</span>
+                    </div>
+                    <div class="entry-item">
+                        <i class="fas fa-fire"></i>
+                        <span>热门机型</span>
+                    </div>
+                    <div class="entry-item">
+                        <i class="fas fa-book"></i>
+                        <span>验机指南</span>
+                    </div>
+                    <div class="entry-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>避坑学堂</span>
+                    </div>
+                    <div class="entry-item">
+                        <i class="fas fa-handshake"></i>
+                        <span>担保交易</span>
+                    </div>
+                    <div class="entry-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>同城面交</span>
+                    </div>
+                    <div class="entry-item">
+                        <i class="fas fa-gift"></i>
+                        <span>平台活动</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cate-wrap">
+                <div class="section-title">
+                    <i class="fas fa-layer-group"></i>数码分类专区
+                </div>
+                <div class="cate-list">
+                    <div class="cate-item">
+                        <img src="https://picsum.photos/id/96/100/100" alt="手机">
+                        <div>手机专区</div>
+                        <div class="num">528条帖子</div>
+                    </div>
+                    <div class="cate-item">
+                        <img src="https://picsum.photos/id/119/100/100" alt="电脑">
+                        <div>笔记本电脑</div>
+                        <div class="num">316条帖子</div>
+                    </div>
+                    <div class="cate-item">
+                        <img src="https://picsum.photos/id/160/100/100" alt="平板">
+                        <div>平板专区</div>
+                        <div class="num">207条帖子</div>
+                    </div>
+                    <div class="cate-item">
+                        <img src="https://picsum.photos/id/11/100/100" alt="耳机">
+                        <div>耳机音频</div>
+                        <div class="num">289条帖子</div>
+                    </div>
+                    <div class="cate-item">
+                        <img src="https://picsum.photos/id/188/100/100" alt="穿戴">
+                        <div>智能穿戴</div>
+                        <div class="num">156条帖子</div>
+                    </div>
+                    <div class="cate-item">
+                        <img src="https://picsum.photos/id/200/100/100" alt="配件">
+                        <div>数码配件</div>
+                        <div class="num">342条帖子</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="home-card">
+                <div style="display:flex;align-items:center;margin-bottom:18px;">
+                    <div class="section-title" style="margin:0;">
+                        <i class="fas fa-bolt"></i>最新帖子动态
+                    </div>
+                    <a href="index.html" class="more-link">查看更多 <i class="fas fa-angle-right"></i></a>
+                </div>
+                <div class="home-post-item">
+                    <div class="post-left">
+                        <img src="https://picsum.photos/id/1012/100/100">
+                        <div>
+                            <div>出自用iPhone 13 Pro 256G</div>
+                            <div style="font-size:12px;color:#999;">2小时前</div>
+                        </div>
+                    </div>
+                    <span class="post-tag-small">出售</span>
+                </div>
+                <div class="home-post-item">
+                    <div class="post-left">
+                        <img src="https://picsum.photos/id/1027/100/100">
+                        <div>
+                            <div>AirPods Pro 2代深度体验评测</div>
+                            <div style="font-size:12px;color:#999;">6小时前</div>
+                        </div>
+                    </div>
+                    <span class="post-tag-small">评测</span>
+                </div>
+                <div class="home-post-item">
+                    <div class="post-left">
+                        <img src="https://picsum.photos/id/1005/100/100">
+                        <div>
+                            <div>买二手耳机必看避坑教程</div>
+                            <div style="font-size:12px;color:#999;">3天前</div>
+                        </div>
+                    </div>
+                    <span class="post-tag-small">避坑</span>
+                </div>
+            </div>
+
+            <div class="home-card">
+                <div class="section-title">
+                    <i class="fas fa-chart-line"></i>平台数据概览
+                </div>
+                <div class="data-wrap">
+                    <div class="data-item">
+                        <div class="num">2.6W+</div>
+                        <div>注册用户</div>
+                    </div>
+                    <div class="data-item">
+                        <div class="num">8600+</div>
+                        <div>成功交易</div>
+                    </div>
+                    <div class="data-item">
+                        <div class="num">328</div>
+                        <div>今日发帖</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="publish-modal" id="publishModal">
+        <div class="publish-modal-content">
+            <div class="publish-modal-header">
+                <h3>发布新帖子</h3>
+                <span class="close-publish" id="closePublish">&times;</span>
+            </div>
+            <div class="publish-modal-body">
+                <div class="form-group">
+                    <label for="postTitle">帖子标题</label>
+                    <input type="text" id="postTitle" placeholder="请输入帖子标题（最多50字）" maxlength="50">
+                </div>
+                <div class="form-group">
+                    <label for="postContent">帖子内容</label>
+                    <textarea id="postContent" placeholder="请输入帖子内容（最多500字）" maxlength="500"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>选择标签</label>
+                    <div class="tag-select">
+                        <div class="tag-option" data-tag="手机">手机</div>
+                        <div class="tag-option" data-tag="电脑">电脑</div>
+                        <div class="tag-option" data-tag="平板">平板</div>
+                        <div class="tag-option" data-tag="耳机">耳机</div>
+                        <div class="tag-option" data-tag="配件">配件</div>
+                        <div class="tag-option" data-tag="求购">求购</div>
+                        <div class="tag-option" data-tag="出售">出售</div>
+                        <div class="tag-option" data-tag="讨论">讨论</div>
+                        <div class="tag-option" data-tag="评测">评测</div>
+                        <div class="tag-option" data-tag="避坑">避坑</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>上传图片（最多3张）</label>
+                    <div class="image-upload">
+                        <div class="upload-btn" id="uploadBtn">
+                            <i class="fas fa-plus"></i>
+                            <span>添加图片</span>
+                        </div>
+                        <div class="upload-preview" id="uploadPreview"></div>
+                    </div>
+                    <input type="file" id="fileInput" accept="image/*" multiple style="display: none;">
+                </div>
+            </div>
+            <div class="publish-modal-footer">
+                <button class="cancel-btn" id="cancelPublish">取消</button>
+                <button class="submit-btn" id="submitPublish">发布帖子</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4 class="footer-title"><i class="fas fa-exclamation-triangle"></i> 避坑提醒</h4>
+                <div class="avoid-pit">
+                    <p><i class="fas fa-check-circle"></i>拒绝私下转账，使用平台担保交易</p>
+                    <p><i class="fas fa-check-circle"></i>收到货后先验机再确认收货</p>
+                    <p><i class="fas fa-check-circle"></i>不要相信"先款后货"的骗局</p>
+                    <p><i class="fas fa-check-circle"></i>保留聊天记录和交易凭证</p>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">关于我们</h4>
+                <ul class="footer-list">
+                    <li><a href="#">平台介绍</a></li>
+                    <li><a href="#">联系我们</a></li>
+                    <li><a href="#">加入我们</a></li>
+                    <li><a href="#">合作伙伴</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">帮助中心</h4>
+                <ul class="footer-list">
+                    <li><a href="#">新手指南</a></li>
+                    <li><a href="#">交易规则</a></li>
+                    <li><a href="#">验机教程</a></li>
+                    <li><a href="#">投诉建议</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">服务条款</h4>
+                <ul class="footer-list">
+                    <li><a href="#">用户协议</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                    <li><a href="#">免责声明</a></li>
+                    <li><a href="#">知识产权</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">关注我们</h4>
+                <ul class="footer-list">
+                    <li><a href="#">微信公众号</a></li>
+                    <li><a href="#">微博</a></li>
+                    <li><a href="#">抖音</a></li>
+                    <li><a href="#">B站</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 机换社 二手数码3C买卖讨论社区 版权所有
+        </div>
+    </div><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>机换社 - 首页</title>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 首页专属样式 */
+        /* 全新差异化轮播 */
+        .carousel {
+            width: 100%;
+            height: 340px;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .carousel-item {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+        }
+        .carousel-item.active {
+            opacity: 1;
+        }
+        /* 三张不同主题渐变背景 */
+        .carousel-item:nth-child(1) {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+        }
+        .carousel-item:nth-child(2) {
+            background: linear-gradient(135deg, #283048, #859398);
+        }
+        .carousel-item:nth-child(3) {
+            background: linear-gradient(135deg, #c31432, #240b36);
+        }
+        .carousel-text {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 60px;
+            color: #fff;
+        }
+        .carousel-title {
+            font-size: 40px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        .carousel-desc {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 25px;
+        }
+        .carousel-btn {
+            width: 140px;
+            height: 45px;
+            border: none;
+            border-radius: 30px;
+            background: #fff;
+            color: #333;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .carousel-btn:hover {
+            background: #667eea;
+            color: #fff;
+        }
+        .carousel-indicators {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.4);
+            cursor: pointer;
+        }
+        .indicator.active {
+            background: #fff;
+        }
+
+        .quick-entry {
+            background: #fff;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .entry-list {
+            display: grid;
+            grid-template-columns: repeat(8,1fr);
+            gap: 15px;
+            text-align: center;
+        }
+        .entry-item {
+            padding: 15px 0;
+            border-radius: 10px;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+        .entry-item:hover {
+            background: #f5f7fa;
+        }
+        .entry-item i {
+            font-size: 28px;
+            color: #667eea;
+            margin-bottom: 8px;
+        }
+        .entry-item span {
+            display: block;
+            font-size: 14px;
+            color: #333;
+        }
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-title i {
+            color: #667eea;
+        }
+        .cate-wrap, .home-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .cate-list {
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            gap: 20px;
+        }
+        .cate-item {
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            background: #f9fafc;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .cate-item:hover {
+            background: #667eea;
+            color: #fff;
+        }
+        .cate-item img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            object-fit: cover;
+        }
+        .cate-item .num {
+            font-size: 12px;
+            color: #999;
+        }
+        .cate-item:hover .num {
+            color: #fff;
+            opacity: 0.8;
+        }
+        .more-link {
+            margin-left: auto;
+            font-size: 14px;
+            color: #667eea;
+            text-decoration: none;
+        }
+        .home-post-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        .home-post-item:last-child {
+            border-bottom: none;
+        }
+        .post-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .post-left img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .post-tag-small {
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 12px;
+            background: #f0f4ff;
+            color: #667eea;
+        }
+        .data-wrap {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+        }
+        .data-item {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg,#667eea,#764ba2);
+            border-radius: 12px;
+            color: #fff;
+        }
+        .data-item .num {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        /* 精选二手好物布局 */
+        .goods-grid {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+        }
+        .goods-card {
+            border-radius: 10px;
+            overflow: hidden;
+            background: #f9fafc;
+        }
+        .goods-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+        .goods-info {
+            padding: 12px;
+        }
+        .goods-title {
+            font-size: 14px;
+            margin-bottom: 8px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .goods-price {
+            color: #e53935;
+            font-weight: bold;
+        }
+        /* 排行列表 */
+        .rank-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        .rank-num {
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            background: #667eea;
+            color: #fff;
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 侧边导航 修复讨论区图标 -->
+        <nav class="side-nav">
+            <div class="side-logo">
+                <i class="fas fa-mobile-alt"></i>
+                <span>机换社</span>
+            </div>
+            <ul class="nav-list">
+                <li class="nav-item active">
+                    <a href="#"><i class="fas fa-home"></i><span>首页</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-search"></i><span>发现</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-exchange-alt"></i><span>买卖市场</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="discuss.html"><i class="fas fa-comments"></i><span>讨论区</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-shield-alt"></i><span>避坑指南</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-cog"></i><span>设置</span></a>
+                </li>
+            </ul>
+            <div class="nav-divider"></div>
+            <div class="nav-footer">
+                <a href="#" class="nav-footer-link"><i class="fas fa-question-circle"></i><span>帮助中心</span></a>
+                <a href="#" class="nav-footer-link"><i class="fas fa-user-circle"></i><span>关于我们</span></a>
+            </div>
+        </nav>
+
+        <!-- 顶部栏 -->
+        <div class="top-bar">
+            <div class="top-bar-logo">
+                <i class="fas fa-mobile-alt"></i>
+                <span>机换社 - 二手数码3C买卖讨论社区</span>
+            </div>
+            <div class="top-search-box">
+                <i class="fas fa-search top-search-icon"></i>
+                <input type="text" class="top-search-input" placeholder="搜索机型、讨论、买卖信息...">
+            </div>
+            <div class="top-user-area">
+                <button class="publish-btn" id="publishBtn">
+                    <i class="fas fa-pen"></i>
+                    发布帖子
+                </button>
+                <div class="dark-mode-btn" id="darkModeBtn"></div>
+                <div class="top-notice">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge">3</span>
+                </div>
+                <div class="user-dropdown">
+                    <img src="https://picsum.photos/id/1005/100/100" alt="用户头像" class="user-avatar-top">
+                    <span class="user-name">数码爱好者</span>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-item"><i class="fas fa-user"></i>个人中心</div>
+                        <div class="dropdown-item"><i class="fas fa-bookmark"></i>我的收藏</div>
+                        <div class="dropdown-item"><i class="fas fa-history"></i>浏览记录</div>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-item"><i class="fas fa-sign-out-alt"></i>退出登录</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 主内容区 -->
+        <div class="main-content-wrap">
+            <!-- 全新差异化自动轮播图 -->
+            <div class="carousel" id="carousel">
+                <div class="carousel-item active">
+                    <div class="carousel-text">
+                        <h2 class="carousel-title">专业二手数码3C交易社区</h2>
+                        <p class="carousel-desc">个人卖家直连买家，无中间商，担保交易更安心</p>
+                        <button class="carousel-btn">立即逛市场</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-text">
+                        <h2 class="carousel-title">闲置数码高价变现</h2>
+                        <p class="carousel-desc">手机、电脑、平板免费发帖，同城面交快速出手</p>
+                        <button class="carousel-btn">发布闲置</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-text">
+                        <h2 class="carousel-title">购机避坑 专业验机指南</h2>
+                        <p class="carousel-desc">拆解骗局套路，小白也能轻松玩转二手数码</p>
+                        <button class="carousel-btn">查看教程</button>
+                    </div>
+                </div>
+                <div class="carousel-indicators">
+                    <div class="indicator active" data-index="0"></div>
+                    <div class="indicator" data-index="1"></div>
+                    <div class="indicator" data-index="2"></div>
+                </div>
+            </div>
+
+            <!-- 公告栏 -->
+            <div class="notice">
+                <i class="fas fa-bullhorn notice-icon"></i>
+                <div class="notice-content">
+                    【重要通知】平台已上线验机担保服务，交易更安全！<a href="#" class="notice-link">立即了解</a>
+                </div>
+            </div>
+
+            <!-- 快捷功能入口 -->
+            <div class="quick-entry">
+                <div class="section-title">
+                    <i class="fas fa-th-large"></i>快捷功能入口
+                </div>
+                <div class="entry-list">
+                    <div class="entry-item">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>我要出售</span>
+                    </div>
+                    <div class="entry-item">
+                        <i class="fas fa-search-dollar"></i>
+                        <span>我要求购</span>
+                    </div>
+                    <div class="entry-item">
+                        <i class="fas fa-fire"></i>
+                        <span>热门机型</span>
+                    </div>
+                    <div class="entry-item">
+                        <i class="fas fa-book"></i>
+                        <span>验机指南</span>
+                    </div>
+                    <div class="entry-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>避坑学堂</span>
+                    </div>
+                    <div class="entry-item">
+                        <i class="fas fa-handshake"></i>
+                        <span>担保交易</span>
+                    </div>
+                    <div class="entry-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>同城面交</span>
+                    </div>
+                    <div class="entry-item">
+                        <i class="fas fa-gift"></i>
+                        <span>平台活动</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 数码分类专区 -->
+            <div class="cate-wrap">
+                <div class="section-title">
+                    <i class="fas fa-layer-group"></i>数码分类专区
+                </div>
+                <div class="cate-list">
+                    <div class="cate-item">
+                        <img src="https://picsum.photos/id/96/100/100" alt="手机">
+                        <div>手机专区</div>
+                        <div class="num">528条帖子</div>
+                    </div>
+                    <div class="cate-item">
+                        <img src="https://picsum.photos/id/119/100/100" alt="电脑">
+                        <div>笔记本电脑</div>
+                        <div class="num">316条帖子</div>
+                    </div>
+                    <div class="cate-item">
+                        <img src="https://picsum.photos/id/160/100/100" alt="平板">
+                        <div>平板专区</div>
+                        <div class="num">207条帖子</div>
+                    </div>
+                    <div class="cate-item">
+                        <img src="https://picsum.photos/id/11/100/100" alt="耳机">
+                        <div>耳机音频</div>
+                        <div class="num">289条帖子</div>
+                    </div>
+                    <div class="cate-item">
+                        <img src="https://picsum.photos/id/188/100/100" alt="穿戴">
+                        <div>智能穿戴</div>
+                        <div class="num">156条帖子</div>
+                    </div>
+                    <div class="cate-item">
+                        <img src="https://picsum.photos/id/200/100/100" alt="配件">
+                        <div>数码配件</div>
+                        <div class="num">342条帖子</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 新增：精选二手好物 -->
+            <div class="home-card">
+                <div style="display:flex;align-items:center;margin-bottom:18px;">
+                    <div class="section-title" style="margin:0;">
+                        <i class="fas fa-fire"></i>精选二手好物
+                    </div>
+                    <a href="#" class="more-link">查看更多 <i class="fas fa-angle-right"></i></a>
+                </div>
+                <div class="goods-grid">
+                    <div class="goods-card">
+                        <img src="https://picsum.photos/id/96/300/200">
+                        <div class="goods-info">
+                            <div class="goods-title">iPhone 14 Pro 256G 国行</div>
+                            <div class="goods-price">¥4299</div>
+                        </div>
+                    </div>
+                    <div class="goods-card">
+                        <img src="https://picsum.photos/id/119/300/200">
+                        <div class="goods-info">
+                            <div class="goods-title">MacBook Air M2 轻薄本</div>
+                            <div class="goods-price">¥5699</div>
+                        </div>
+                    </div>
+                    <div class="goods-card">
+                        <img src="https://picsum.photos/id/160/300/200">
+                        <div class="goods-info">
+                            <div class="goods-title">iPad Pro 11英寸 2022款</div>
+                            <div class="goods-price">¥3899</div>
+                        </div>
+                    </div>
+                    <div class="goods-card">
+                        <img src="https://picsum.photos/id/11/300/200">
+                        <div class="goods-info">
+                            <div class="goods-title">AirPods Pro 2代 全新</div>
+                            <div class="goods-price">¥1399</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 新增：今日热门机型排行 -->
+            <div class="home-card">
+                <div class="section-title">
+                    <i class="fas fa-ranking-star"></i>今日热门机型排行
+                </div>
+                <div class="rank-item">
+                    <div class="rank-num">1</div>
+                    <div>iPhone 15 Pro Max</div>
+                    <div style="margin-left:auto;color:#999;">热度 2890</div>
+                </div>
+                <div class="rank-item">
+                    <div class="rank-num">2</div>
+                    <div>小米14 Ultra</div>
+                    <div style="margin-left:auto;color:#999;">热度 2456</div>
+                </div>
+                <div class="rank-item">
+                    <div class="rank-num">3</div>
+                    <div>华为Mate 60 Pro</div>
+                    <div style="margin-left:auto;color:#999;">热度 2130</div>
+                </div>
+                <div class="rank-item">
+                    <div class="rank-num">4</div>
+                    <div>MacBook Pro 14英寸</div>
+                    <div style="margin-left:auto;color:#999;">热度 1876</div>
+                </div>
+                <div class="rank-item">
+                    <div class="rank-num">5</div>
+                    <div>三星S24 Ultra</div>
+                    <div style="margin-left:auto;color:#999;">热度 1620</div>
+                </div>
+            </div>
+
+            <!-- 最新帖子动态 -->
+            <div class="home-card">
+                <div style="display:flex;align-items:center;margin-bottom:18px;">
+                    <div class="section-title" style="margin:0;">
+                        <i class="fas fa-bolt"></i>最新帖子动态
+                    </div>
+                    <a href="discuss.html" class="more-link">查看更多 <i class="fas fa-angle-right"></i></a>
+                </div>
+                <div class="home-post-item">
+                    <div class="post-left">
+                        <img src="https://picsum.photos/id/1012/100/100">
+                        <div>
+                            <div>出自用iPhone 13 Pro 256G</div>
+                            <div style="font-size:12px;color:#999;">2小时前</div>
+                        </div>
+                    </div>
+                    <span class="post-tag-small">出售</span>
+                </div>
+                <div class="home-post-item">
+                    <div class="post-left">
+                        <img src="https://picsum.photos/id/1027/100/100">
+                        <div>
+                            <div>AirPods Pro 2代深度体验评测</div>
+                            <div style="font-size:12px;color:#999;">6小时前</div>
+                        </div>
+                    </div>
+                    <span class="post-tag-small">评测</span>
+                </div>
+                <div class="home-post-item">
+                    <div class="post-left">
+                        <img src="https://picsum.photos/id/1005/100/100">
+                        <div>
+                            <div>买二手耳机必看避坑教程</div>
+                            <div style="font-size:12px;color:#999;">3天前</div>
+                        </div>
+                    </div>
+                    <span class="post-tag-small">避坑</span>
+                </div>
+            </div>
+
+            <!-- 平台数据概览 -->
+            <div class="home-card">
+                <div class="section-title">
+                    <i class="fas fa-chart-line"></i>平台数据概览
+                </div>
+                <div class="data-wrap">
+                    <div class="data-item">
+                        <div class="num">2.6W+</div>
+                        <div>注册用户</div>
+                    </div>
+                    <div class="data-item">
+                        <div class="num">8600+</div>
+                        <div>成功交易</div>
+                    </div>
+                    <div class="data-item">
+                        <div class="num">328</div>
+                        <div>今日发帖</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 弹窗结构 -->
+    <div class="publish-modal" id="publishModal">
+        <div class="publish-modal-content">
+            <div class="publish-modal-header">
+                <h3>发布新帖子</h3>
+                <span class="close-publish" id="closePublish">&times;</span>
+            </div>
+            <div class="publish-modal-body">
+                <div class="form-group">
+                    <label for="postTitle">帖子标题</label>
+                    <input type="text" id="postTitle" placeholder="请输入帖子标题（最多50字）" maxlength="50">
+                </div>
+                <div class="form-group">
+                    <label for="postContent">帖子内容</label>
+                    <textarea id="postContent" placeholder="请输入帖子内容（最多500字）" maxlength="500"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>选择标签</label>
+                    <div class="tag-select">
+                        <div class="tag-option" data-tag="手机">手机</div>
+                        <div class="tag-option" data-tag="电脑">电脑</div>
+                        <div class="tag-option" data-tag="平板">平板</div>
+                        <div class="tag-option" data-tag="耳机">耳机</div>
+                        <div class="tag-option" data-tag="配件">配件</div>
+                        <div class="tag-option" data-tag="求购">求购</div>
+                        <div class="tag-option" data-tag="出售">出售</div>
+                        <div class="tag-option" data-tag="讨论">讨论</div>
+                        <div class="tag-option" data-tag="评测">评测</div>
+                        <div class="tag-option" data-tag="避坑">避坑</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>上传图片（最多3张）</label>
+                    <div class="image-upload">
+                        <div class="upload-btn" id="uploadBtn">
+                            <i class="fas fa-plus"></i>
+                            <span>添加图片</span>
+                        </div>
+                        <div class="upload-preview" id="uploadPreview"></div>
+                    </div>
+                    <input type="file" id="fileInput" accept="image/*" multiple style="display: none;">
+                </div>
+            </div>
+            <div class="publish-modal-footer">
+                <button class="cancel-btn" id="cancelPublish">取消</button>
+                <button class="submit-btn" id="submitPublish">发布帖子</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4 class="footer-title"><i class="fas fa-exclamation-triangle"></i> 避坑提醒</h4>
+                <div class="avoid-pit">
+                    <p><i class="fas fa-check-circle"></i>拒绝私下转账，使用平台担保交易</p>
+                    <p><i class="fas fa-check-circle"></i>收到货后先验机再确认收货</p>
+                    <p><i class="fas fa-check-circle"></i>不要相信"先款后货"的骗局</p>
+                    <p><i class="fas fa-check-circle"></i>保留聊天记录和交易凭证</p>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">关于我们</h4>
+                <ul class="footer-list">
+                    <li><a href="#">平台介绍</a></li>
+                    <li><a href="#">联系我们</a></li>
+                    <li><a href="#">加入我们</a></li>
+                    <li><a href="#">合作伙伴</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">帮助中心</h4>
+                <ul class="footer-list">
+                    <li><a href="#">新手指南</a></li>
+                    <li><a href="#">交易规则</a></li>
+                    <li><a href="#">验机教程</a></li>
+                    <li><a href="#">投诉建议</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">服务条款</h4>
+                <ul class="footer-list">
+                    <li><a href="#">用户协议</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                    <li><a href="#">免责声明</a></li>
+                    <li><a href="#">知识产权</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">关注我们</h4>
+                <ul class="footer-list">
+                    <li><a href="#">微信公众号</a></li>
+                    <li><a href="#">微博</a></li>
+                    <li><a href="#">抖音</a></li>
+                    <li><a href="#">B站</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 机换社 二手数码3C买卖讨论社区 版权所有
+        </div>
+    </div>
+
+    <div class="img-preview-modal" id="imgPreviewModal">
+        <span class="close-preview" id="closePreview">&times;</span>
+        <img src="" alt="图片预览" class="img-preview-content" id="previewImg">
+    </div>
+
+    <script>
+        // 自动轮播逻辑
+        const items = document.querySelectorAll('.carousel-item');
+        const indicators = document.querySelectorAll('.indicator');
+        let currentIndex = 0;
+        let timer = null;
+
+        // 切换轮播
+        function switchCarousel(index) {
+            items.forEach((item, i) => {
+                item.classList.toggle('active', i === index);
+                indicators[i].classToggle('active', i === index);
+            });
+        }
+
+        // 下一张
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % items.length;
+            switchCarousel(currentIndex);
+        }
+
+        // 自动播放
+        function startAutoPlay() {
+            timer = setInterval(nextSlide, 4000);
+        }
+        // 暂停播放
+        function stopAutoPlay() {
+            clearInterval(timer);
+        }
+
+        // 圆点点击切换
+        indicators.forEach((dot, idx) => {
+            dot.addEventListener('click', () => {
+                currentIndex = idx;
+                switchCarousel(currentIndex);
+            });
+        });
+
+        // 鼠标悬停暂停，离开继续
+        const carousel = document.getElementById('carousel');
+        carousel.addEventListener('mouseenter', stopAutoPlay);
+        carousel.addEventListener('mouseleave', startAutoPlay);
+
+        // 初始化启动
+        startAutoPlay();
+
+        // 这里粘贴你原来网站其他JS代码即可
+    </script>
+</body>
+</html>
+
+    <div class="img-preview-modal" id="imgPreviewModal">
+        <span class="close-preview" id="closePreview">&times;</span>
+        <img src="" alt="图片预览" class="img-preview-content" id="previewImg">
+    </div>
+
+</body>
+</html>

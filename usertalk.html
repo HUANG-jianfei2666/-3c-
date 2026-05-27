@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二手数码3C买卖讨论社区</title>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="side-nav">
+            <div class="side-logo">
+                <i class="fas fa-mobile-alt"></i>
+                <span>用户社区</span>
+            </div>
+            <ul class="nav-list">
+                <li class="nav-item ">
+                    <a href="index.html"><i class="fas fa-home"></i><span>首页</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-search"></i><span>发现</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-exchange-alt"></i><span>买卖市场</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a href="usertalk.html"><i class="fas fa-comments"></i><span>用户社区</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fas fa-user"></i><span>个人中心</span></a>
+                </li>
+            </ul>
+            <div class="nav-divider"></div>
+            <div class="nav-footer">
+                <a href="#" class="nav-footer-link"><i class="fas fa-question-circle"></i><span>帮助中心</span></a>
+                <a href="#" class="nav-footer-link"><i class="fas fa-user-circle"></i><span>关于我们</span></a>
+            </div>
+        </nav>
+
+        <div class="top-bar">
+            <div class="top-bar-logo">
+                <i class="fas fa-mobile-alt"></i>
+                <span>二手数码3C买卖讨论社区</span>
+            </div>
+            <div class="top-search-box">
+                <i class="fas fa-search top-search-icon"></i>
+                <input type="text" class="top-search-input" placeholder="搜索机型、讨论、买卖信息...">
+            </div>
+            <div class="top-user-area">
+                <button class="publish-btn" id="publishBtn">
+                    <i class="fas fa-pen"></i>
+                    发布帖子
+                </button>
+                <div class="dark-mode-btn" id="darkModeBtn"></div>
+                <div class="top-notice">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge">3</span>
+                </div>
+                <div class="user-dropdown">
+                    <img src="https://picsum.photos/id/1005/100/100" alt="用户头像" class="user-avatar-top">
+                    <span class="user-name">数码爱好者</span>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-item"><i class="fas fa-user"></i>个人中心</div>
+                        <div class="dropdown-item"><i class="fas fa-bookmark"></i>我的收藏</div>
+                        <div class="dropdown-item"><i class="fas fa-history"></i>浏览记录</div>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-item"><i class="fas fa-sign-out-alt"></i>退出登录</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content-wrap">
+            <div class="carousel" id="carousel">
+                <div class="carousel-item active">
+                    <div class="carousel-text">
+                        <h2 class="carousel-title">专业二手数码交易社区</h2>
+                        <p class="carousel-desc">验机指南、价格参考、安全交易，一站式解决二手数码买卖难题</p>
+                        <button class="carousel-btn">立即加入</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-text">
+                        <h2 class="carousel-title">闲置数码变废为宝</h2>
+                        <p class="carousel-desc">个人闲置、专业回收，让你的旧设备发挥最大价值</p>
+                        <button class="carousel-btn">发布闲置</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-text">
+                        <h2 class="carousel-title">避坑指南实时更新</h2>
+                        <p class="carousel-desc">汇总各类诈骗套路，新手也能安心买卖二手数码</p>
+                        <button class="carousel-btn">查看指南</button>
+                    </div>
+                </div>
+                <div class="carousel-indicators">
+                    <div class="indicator active" data-index="0"></div>
+                    <div class="indicator" data-index="1"></div>
+                    <div class="indicator" data-index="2"></div>
+                </div>
+            </div>
+
+            <div class="notice">
+                <i class="fas fa-bullhorn notice-icon"></i>
+                <div class="notice-content">
+                    【重要通知】平台已上线验机担保服务，交易更安全！<a href="#" class="notice-link">立即了解</a>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="post-area">
+                    <div class="tag-nav">
+                        <div class="tag-list">
+                            <div class="tag-item active">全部</div>
+                            <div class="tag-item">手机</div>
+                            <div class="tag-item">电脑</div>
+                            <div class="tag-item">平板</div>
+                            <div class="tag-item">耳机</div>
+                            <div class="tag-item">配件</div>
+                            <div class="tag-item">求购</div>
+                            <div class="tag-item">出售</div>
+                            <div class="tag-item">避坑</div>
+                            <div class="tag-item">讨论</div>
+                        </div>
+                    </div>
+
+                    <div class="post-list" id="postList"></div>
+
+                    <div class="pagination">
+                        <button class="pagination-btn" id="prevBtn" disabled>上一页</button>
+                        <span id="pageInfo">第 1 页 / 共 5 页</span>
+                        <button class="pagination-btn" id="nextBtn">下一页</button>
+                        <button class="pagination-btn refresh-btn" id="refreshBtn">
+                            <i class="fas fa-sync-alt"></i>
+                            刷新帖子
+                        </button>
+                    </div>
+                </div>
+
+                <div class="sidebar">
+                    <div class="sidebar-card">
+                        <h3 class="sidebar-title"><i class="fas fa-fire"></i>最新交易</h3>
+                        <div class="trade-list">
+                            <div class="trade-item">
+                                <div class="trade-title">iPhone 17 Pro 256G 暗紫色 95新</div>
+                                <div class="trade-info">
+                                    <span>¥5200</span>
+                                    <span class="trade-tag">已成交</span>
+                                </div>
+                            </div>
+                            <div class="trade-item">
+                                <div class="trade-title">联想拯救者Y9000P 2023款 i7</div>
+                                <div class="trade-info">
+                                    <span>¥7500</span>
+                                    <span class="trade-tag">待成交</span>
+                                </div>
+                            </div>
+                            <div class="trade-item">
+                                <div class="trade-title">AirPods Pro 2代 国行正品</div>
+                                <div class="trade-info">
+                                    <span>¥1200</span>
+                                    <span class="trade-tag">已成交</span>
+                                </div>
+                            </div>
+                            <div class="trade-item">
+                                <div class="trade-title">iPad Pro 11寸 M2芯片 128G</div>
+                                <div class="trade-info">
+                                    <span>¥4800</span>
+                                    <span class="trade-tag">待成交</span>
+                                </div>
+                            </div>
+                            <div class="trade-item">
+                                <div class="trade-title">三星Galaxy S23 Ultra 12+512G 悠野绿</div>
+                                <div class="trade-info">
+                                    <span>¥4600</span>
+                                    <span class="trade-tag">待成交</span>
+                                </div>
+                            </div>
+                            <div class="trade-item">
+                                <div class="trade-title">索尼WH-1000XM5 头戴式降噪耳机</div>
+                                <div class="trade-info">
+                                    <span>¥1500</span>
+                                    <span class="trade-tag">已成交</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3 class="sidebar-title"><i class="fas fa-star"></i>热门机型</h3>
+                        <div class="hot-model">
+                            <div class="model-item">
+                                <img src="./img/苹果17.webp" alt="iPhone 17" class="model-img">
+                                <span class="model-name">iPhone 17</span>
+                                <span class="model-count">128条</span>
+                            </div>
+                            <div class="model-item">
+                                <img src="./img/macbookpro.webp" alt="MacBook Pro" class="model-img">
+                                <span class="model-name">MacBook Pro</span>
+                                <span class="model-count">96条</span>
+                            </div>
+                            <div class="model-item">
+                                <img src="./img/华为mate80promax.webp" alt="华为Mate 80 Pro Max" class="model-img">
+                                <span class="model-name">华为Mate 80 Pro Max</span>
+                                <span class="model-count">87条</span>
+                            </div>
+                            <div class="model-item">
+                                <img src="./img/小米17.webp" alt="小米17" class="model-img">
+                                <span class="model-name">小米15</span>
+                                <span class="model-count">72条</span>
+                            </div>
+                            <div class="model-item">
+                                <img src="./img/oppofind9pro.webp" alt="OPPO Find X9 Pro" class="model-img">
+                                <span class="model-name">OPPO Find X6 Pro</span>
+                                <span class="model-count">65条</span>
+                            </div>
+                            <div class="model-item">
+                                <img src="./img/一加15.webp" alt="一加15" class="model-img">
+                                <span class="model-name">一加15</span>
+                                <span class="model-count">58条</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="publish-modal" id="publishModal">
+        <div class="publish-modal-content">
+            <div class="publish-modal-header">
+                <h3>发布新帖子</h3>
+                <span class="close-publish" id="closePublish">&times;</span>
+            </div>
+            <div class="publish-modal-body">
+                <div class="form-group">
+                    <label for="postTitle">帖子标题</label>
+                    <input type="text" id="postTitle" placeholder="请输入帖子标题（最多50字）" maxlength="50">
+                </div>
+                <div class="form-group">
+                    <label for="postContent">帖子内容</label>
+                    <textarea id="postContent" placeholder="请输入帖子内容（最多500字）" maxlength="500"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>选择标签</label>
+                    <div class="tag-select">
+                        <div class="tag-option" data-tag="手机">手机</div>
+                        <div class="tag-option" data-tag="电脑">电脑</div>
+                        <div class="tag-option" data-tag="平板">平板</div>
+                        <div class="tag-option" data-tag="耳机">耳机</div>
+                        <div class="tag-option" data-tag="配件">配件</div>
+                        <div class="tag-option" data-tag="求购">求购</div>
+                        <div class="tag-option" data-tag="出售">出售</div>
+                        <div class="tag-option" data-tag="讨论">讨论</div>
+                        <div class="tag-option" data-tag="评测">评测</div>
+                        <div class="tag-option" data-tag="避坑">避坑</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>上传图片（最多3张）</label>
+                    <div class="image-upload">
+                        <div class="upload-btn" id="uploadBtn">
+                            <i class="fas fa-plus"></i>
+                            <span>添加图片</span>
+                        </div>
+                        <div class="upload-preview" id="uploadPreview"></div>
+                    </div>
+                    <input type="file" id="fileInput" accept="image/*" multiple style="display: none;">
+                </div>
+            </div>
+            <div class="publish-modal-footer">
+                <button class="cancel-btn" id="cancelPublish">取消</button>
+                <button class="submit-btn" id="submitPublish">发布帖子</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4 class="footer-title"><i class="fas fa-exclamation-triangle"></i> 避坑提醒</h4>
+                <div class="avoid-pit">
+                    <p><i class="fas fa-check-circle"></i>拒绝私下转账，使用平台担保交易</p>
+                    <p><i class="fas fa-check-circle"></i>收到货后先验机再确认收货</p>
+                    <p><i class="fas fa-check-circle"></i>不要相信"先款后货"的骗局</p>
+                    <p><i class="fas fa-check-circle"></i>保留聊天记录和交易凭证</p>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">关于我们</h4>
+                <ul class="footer-list">
+                    <li><a href="#">平台介绍</a></li>
+                    <li><a href="#">联系我们</a></li>
+                    <li><a href="#">加入我们</a></li>
+                    <li><a href="#">合作伙伴</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">帮助中心</h4>
+                <ul class="footer-list">
+                    <li><a href="#">新手指南</a></li>
+                    <li><a href="#">交易规则</a></li>
+                    <li><a href="#">验机教程</a></li>
+                    <li><a href="#">投诉建议</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">服务条款</h4>
+                <ul class="footer-list">
+                    <li><a href="#">用户协议</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                    <li><a href="#">免责声明</a></li>
+                    <li><a href="#">知识产权</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">关注我们</h4>
+                <ul class="footer-list">
+                    <li><a href="#">微信公众号</a></li>
+                    <li><a href="#">微博</a></li>
+                    <li><a href="#">抖音</a></li>
+                    <li><a href="#">B站</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 机换社 二手数码3C买卖讨论社区 版权所有
+        </div>
+    </div>
+
+    <div class="img-preview-modal" id="imgPreviewModal">
+        <span class="close-preview" id="closePreview">&times;</span>
+        <img src="" alt="图片预览" class="img-preview-content" id="previewImg">
+    </div>
+<script src="./talk.js"></script>
+</body>
+</html>
